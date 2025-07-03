@@ -1,0 +1,17 @@
+import math
+
+def minimax(node, depth, maximizingPlayer):
+    if depth == 0 or node is None:
+        return node.value
+    if maximizingPlayer:
+        bestValue = -math.inf
+        for child in node.children:
+            v = minimax(child, depth-1, False)
+            bestValue = max(bestValue, v)
+        return bestValue
+    else:
+        bestValue = math.inf
+        for child in node.children:
+            v = minimax(child, depth-1, True)
+            bestValue = min(bestValue, v)
+        return bestValue
