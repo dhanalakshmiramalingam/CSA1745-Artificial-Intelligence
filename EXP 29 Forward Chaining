@@ -1,0 +1,12 @@
+symptom(fever).
+symptom(cough).
+symptom(fatigue).
+
+diagnose(covid) :-
+    symptom(fever),
+    symptom(cough),
+    symptom(fatigue).
+
+diagnose(flu) :-
+    symptom(fever),
+    symptom(cough).
