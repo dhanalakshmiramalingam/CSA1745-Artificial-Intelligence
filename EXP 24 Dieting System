@@ -1,0 +1,11 @@
+disease(diabetes).
+disease(hypertension).
+disease(obesity).
+
+food(oats).
+food(banana).
+food(apple).
+
+recommended(diabetes, oats).
+recommended(hypertension, banana).
+recommended(obesity, apple).
