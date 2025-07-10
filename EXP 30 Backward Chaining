@@ -1,0 +1,7 @@
+fact(rainy).
+fact(cloudy).
+
+wet_grass :- fact(rainy).
+stay_home :- wet_grass.
+take_umbrella :- fact(rainy).
+sky_condition :- fact(cloudy).
