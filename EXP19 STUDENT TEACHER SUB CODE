@@ -1,0 +1,16 @@
+subject(maths, ma101).
+subject(english, en102).
+
+teacher(john, maths).
+teacher(susan, english).
+
+student(alice, maths).
+student(bob, english).
+
+teaches(Teacher, Student) :-
+    teacher(Teacher, Subject),
+    student(Student, Subject).
+
+subject_code(Student, Code) :-
+    student(Student, Subject),
+    subject(Subject, Code).
