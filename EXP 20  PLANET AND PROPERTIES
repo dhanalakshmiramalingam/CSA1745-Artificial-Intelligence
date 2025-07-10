@@ -1,0 +1,21 @@
+planet(mercury, small, 58, no).
+planet(venus, medium, 108, no).
+planet(earth, medium, 150, yes).
+planet(mars, small, 228, no).
+planet(jupiter, large, 778, no).
+planet(saturn, large, 1429, no).
+planet(uranus, medium, 2871, no).
+planet(neptune, medium, 4495, no).
+
+supports_life(Planet) :-
+    planet(Planet, _, _, yes).
+
+far_planet(Planet) :-
+    planet(Planet, _, Distance, _),
+    Distance > 1000.
+
+
+input:
+?- supports_life(P).
+?- far_planet(P).
+?- planet(Name, Size, Distance, Life).
