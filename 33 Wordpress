@@ -1,0 +1,8 @@
+user(john).
+user(alice).
+
+post(john, 'Hello from Prolog').
+post(alice, 'My First Blog').
+
+comment(john, 'Nice post!').
+comment(alice, 'Thank you!').
