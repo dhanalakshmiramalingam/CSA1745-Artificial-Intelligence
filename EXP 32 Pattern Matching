@@ -1,0 +1,13 @@
+match(Pattern, List, Index) :-
+    match(Pattern, List, 0, Index).
+
+match(_, [], _, _) :- fail.
+match(Pattern, List, Pos, Pos) :-
+    prefix(Pattern, List).
+match(Pattern, [_|Tail], Pos, Index) :-
+    Pos1 is Pos + 1,
+    match(Pattern, Tail, Pos1, Index).
+
+prefix([], _).
+prefix([H|T1], [H|T2]) :-
+    prefix(T1, T2).
