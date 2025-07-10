@@ -1,0 +1,19 @@
+symptom(fever).
+symptom(cough).
+symptom(rash).
+
+disease(covid).
+disease(flu).
+disease(measles).
+
+has_symptom(covid, fever).
+has_symptom(covid, cough).
+
+has_symptom(flu, fever).
+has_symptom(flu, cough).
+
+has_symptom(measles, fever).
+has_symptom(measles, rash).
+
+possible_disease(Symptom, Disease) :-
+    has_symptom(Disease, Symptom).
